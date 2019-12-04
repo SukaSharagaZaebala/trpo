@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Lab.core;
+using Lab.cerber;
 
 namespace Lab.cerber
 {
@@ -13,7 +14,7 @@ namespace Lab.cerber
         {
             if (a == 0.0f || b == 0.0f)
             {
-                return float.NaN;
+                throw new CerberException("Неверное уравнение");
             }
 
             x = -b / a;

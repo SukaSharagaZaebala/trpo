@@ -16,22 +16,15 @@ namespace Lab.cerber
             {
                 float result = SolveLin(b, c);
 
-                if (float.IsNaN(result))
-                {
-                    return new List<float>();
-                }
-                else
-                {
-                    x = result;
-                    return new List<float> { result };
-                }
+                x = result;
+                return new List<float> { result };
             }
 
             float disc = CalcDisc(a, b, c);
 
             if (disc < 0)
             {
-                return new List<float>();
+                throw new CerberException("Решений нет");
             }
 
             List<float> roots = new List<float>();

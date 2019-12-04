@@ -11,7 +11,7 @@ namespace Lab.cerber
         {
             foreach (var entry in log)
             {
-                Console.Write(entry);
+                Console.WriteLine(entry);
             }
         }
 
